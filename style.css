@@ -1,0 +1,132 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #b3ffd3;;
+  margin: 0;
+  padding: 20px;
+  min-height: 900px;
+  height:100%;
+}
+
+h1 {
+  color: #2c3e50;
+}
+
+.controls {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.controls label {
+  margin-right: 10px;
+}
+
+.controls input[type="range"] {
+  vertical-align: middle;
+  width: 150px;
+}
+
+.controls button {
+  margin-left: 10px;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 12px;
+  opacity: 80%;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 300px;
+  margin: auto;
+}
+
+button {
+  padding: 15px;
+  font-size: 16px;
+  background-color: #344421;
+  color: #b3ffd3;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #55c47a;
+}
+
+.titleimg {
+  width: 350px;
+  padding-right: 15px;
+}
+
+.survivor-gradient {
+  background: linear-gradient(
+    to bottom,
+    #123113,     /* Darker jungle green */
+    #38723b,     /* Mid-tone green from the logo */
+    #fdd835,     /* Letter color (e.g., golden yellow) */
+    #66bb6a,     /* Mid-tone green again */
+    #0a220b      /* Deep forest green */
+  );
+  color: #b3ffd3;;
+}
+
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(to right, #113013, #5c5433, #113013);
+  border-radius: 5px;
+  outline: none;
+  transition: background 0.3s;
+  -webkit-transition: 0.3s;
+}
+
+/* WebKit (Chrome, Safari) */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius:50%;
+  border: solid 1px #123113;
+  cursor:pointer;
+  background-color:#927d21;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fdd835;
+  
+  border: solid 1px #123113;
+  cursor: pointer;
+}
+
+.pause-btn {
+  background-image: url('/img/playpause.png');  
+  background-size: 100px, 100px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: left;
+  width: 50px;
+  height: 50px;
+  background-position-x: 2px;
+  background-position-y: 1px;
+}
+
+.play-btn {
+  background-image: url('/img/playpause.png');  
+  background-size: 100px, 100px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: right;
+  width: 50px;
+  height: 50px;
+  background-position-x: -51px;
+  background-position-y: 1px;
+}

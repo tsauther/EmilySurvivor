@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#2c3e50"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="/img/192ico.png">
+  <link rel="manifest" href="manifest.json"/>
+  <link rel="stylesheet" href="style.css"/>
+  <title>Survivor - Emily</title>
+</head>
+<body class="survivor-gradient">
+  <img class="titleimg" src="img/titlesm.png" />
+  
+<div class="controls">
+  <div style="margin-top:5px;">
+    <label for="volume"><img src="/img/volume.png" style="width:40px; height:40px; opacity:80%" /></label>
+    <input type="range" id="volume" min="0" max="1" step="0.01" value="1" style="margin-top:-30px;">
+  </div>
+  <div>
+    <button class="pause-btn" onclick="pauseSound()"></button>
+    <button class="play-btn" onclick="stopSound()"></button>
+  </div>
+</div>
+
+  <div class="button-container">
+    <button onclick="playSound('mashup.mp3')">Mashup Theme</button>
+    <button onclick="playSound('borneo.mp3')">Borneo Theme</button>
+    <button onclick="playSound('SurvivorXIV_Fiji.mp3')">Theme 2</button>
+    <hr />
+    <button onclick="playSound('whoultimatesurvivor.mp3')">Who Ultimate Survivor</button>
+    <button onclick="playSound('oktimetovote.mp3')">Time To Vote</button>
+    <button onclick="playSound('backtocamp.mp3')">Back To Camp</button>
+    <button onclick="playSound('finaltribalcouncil.mp3')">Final Tribal</button>
+    <button onclick="playSound('tribehasspoken.mp3')">Tribe Has Spoken</button>
+    <button onclick="playSound('tallythevotes.mp3')">Tally The Votes</button>
+    <button onclick="playSound('bringmeyourtorch.mp3')">Bring Me Your Torch</button>
+    <button onclick="playSound('thewinneris.mp3')">The Winner Is</button>
+    <button onclick="playSound('DealWDevil.mp3')">Deal Devil</button>
+    <button onclick="playSound('funcast.mp3')">Best Cast</button>
+    <hr />
+    <button onclick="playSound('alpenhorn.mp3')">Conch Horn</button>
+    <button onclick="playSound('kicks.mp3')">Monkeys</button>
+    <button onclick="playSound('ethinic-percussion.mp3')">Ethnic Perc</button>
+    <button onclick="playSound('losing-horn.mp3')">Loser Horn</button>
+    <button onclick="playSound('happybday.mp3')">Da Sizzle</button>
+    <br /><br />
+    <button id="installBtn" style="display:none">Install App</button>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
