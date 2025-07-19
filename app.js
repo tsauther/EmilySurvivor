@@ -45,29 +45,19 @@ function showToast(message){
 }
 
 let deferredPrompt;
-
 window.addEventListener('beforeinstallprompt', (e) => {
-  // Prevent Chrome from showing the default prompt
   e.preventDefault();
-  // Save the event so it can be triggered later
   deferredPrompt = e;
+  document.getElementById('installBtn').style.display = 'block';
+});
 
-  // Show your custom install button or UI
-  const installBtn = document.getElementById('installBtn');
-  installBtn.style.display = 'block';
-
-  installBtn.addEventListener('click', () => {
-    // Show the install prompt
+document.getElementById('installBtn').addEventListener('click', () => {
+  if (deferredPrompt) {
     deferredPrompt.prompt();
-
-    // Wait for the user's response
-    deferredPrompt.userChoice.then((choiceResult) => {
-      if (choiceResult.outcome === 'accepted') {
-        showToast("The app has been installed.");
-        installBtn.style.display = 'none';
-      } 
+    deferredPrompt.userChoice.then(() => {
       deferredPrompt = null;
+      document.getElementById('installBtn').style.display = 'none';
     });
-  });
+  }
 });
 

@@ -15,14 +15,12 @@
   <img class="titleimg" src="img/titlesm.png" />
   
 <div class="controls">
-  <div style="margin-top:5px;">
-    <label for="volume"><img src="/img/volume.png" style="width:40px; height:40px; opacity:80%" /></label>
-    <input type="range" id="volume" min="0" max="1" step="0.01" value="1" style="margin-top:-30px;">
-  </div>
-  <div>
-    <button class="pause-btn" onclick="pauseSound()"></button>
-    <button class="play-btn" onclick="stopSound()"></button>
-  </div>
+  <label for="volume">
+    <img src="/img/volume.png" style="width:40px; height:40px; opacity:80%" />
+  </label>
+  <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+  <button class="pause-btn" onclick="pauseSound()"></button>
+  <button class="play-btn" onclick="stopSound()"></button>
 </div>
 
   <div class="button-container">
@@ -50,5 +48,10 @@
     <button id="installBtn" style="display:none">Install App</button>
   </div>
   <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
 </body>
 </html>
