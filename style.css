@@ -118,7 +118,7 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .pause-btn {
-  background-image: url('/img/playpause.png');  
+  background-image: url('img/playpause.png');  
   background-size: 100px, 100px;
   background-color: transparent;
   background-repeat: no-repeat;
@@ -130,7 +130,7 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .play-btn {
-  background-image: url('/img/playpause.png');  
+  background-image: url('img/playpause.png');  
   background-size: 100px, 100px;
   background-color: transparent;
   background-repeat: no-repeat;
